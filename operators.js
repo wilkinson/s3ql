@@ -22,37 +22,34 @@
  // Definitions
 
     merge = function (x) {
+     // This function needs documentation.
+        if (typeof x !== 'string') {
+            throw new TypeError('`merge` expects a string');
+        }
      // Parse states
-        var d, i, j, n, r, xx, y, z;
-        if (typeof x === 'string') {
-         // Parse string into an array of states.
-            xx = x.split(',');
-        } else {
-         // In case `x` was already an array with parsed states
-            xx = x;
+        var d, i, j, max_size, n, r, states, y, z;
+        states = x.split(',');
+        n = states.length;
+     // Find out maximum size, `max_size`, of all states.
+        max_size = 0;
+        for (i = 0; i < n; i += 1) {
+            max_size = Math.max(max_size, states[i].length);
         }
-     // Find out maximum size, `n`, of all states.
-        n = 0;
-        for (i = 0; i < xx.length; i += 1) {
-            if (xx[i].length > n) {
-                n = xx[i].length;
-            }
-        }
-        if (n > 1) {
+        if (max_size > 1) {
          // If multiple states, solve one at a time.
-            for (i = 0; i < xx.length; i += 1) {
+            for (i = 0; i < n; i += 1) {
              // Add blank states if missing.
-                for (j = xx[i].length; j < n; j += 1) {
-                    xx[i] += '-';
+                for (j = states[i].length; j < max_size; j += 1) {
+                    states[i] += '-';
                 }
             }
             z = [];                     //- collection of singular states
             y = [];                     //- collection of merged states
-            for (j = 0; j < n; j += 1) {
-                for (i = 0; i < xx.length; i += 1) {
-                    z[i] = xx[i].slice(j, j + 1);
+            for (j = 0; j < max_size; j += 1) {
+                for (i = 0; i < n; i += 1) {
+                    z[i] = states[i].slice(j, j + 1);
                 }
-                y[j] = merge(z);
+                y[j] = merge(z.join(','));
             }
         } else {
          // Equation 2 in the manuscript
@@ -60,13 +57,13 @@
             d = [];                     //- indices of dominant states
             r = [];                     //- indices of recessive states
             y = '';                     //- collection of merged states
-            for (i = 0; i < xx.length; i += 1) {
-                if (xx[i].toUpperCase() === xx[i]) {
-                    if (xx[i] !== '-') {
-                        d.push(xx[i]);
+            for (i = 0; i < n; i += 1) {
+                if (states[i].toUpperCase() === states[i]) {
+                    if (states[i] !== '-') {
+                        d.push(states[i]);
                     }
                 } else {
-                    r.push(xx[i]);
+                    r.push(states[i]);
                 }
             }
             if (d.length > 0) {
@@ -86,6 +83,12 @@
             }
         }
      // Always return a string.
+/*
+        if (typeof y !== 'string') {
+            throw new TypeError('`merge` returns a string');
+        }
+        return y;
+*/
         return (typeof y === 'string') ? y : y.join('');
     };
 
@@ -175,7 +178,7 @@
                         Si[Si.length] = migrate(Sx[j], m);
                     }
                 }
-                Sy[i] = merge(Si);
+                Sy[i] = merge(Si.join(','));
             }
             return Sy;
         };
@@ -208,6 +211,7 @@
     unit_tests = function () {
      // This function needs documentation.
         console.log(merge('b,c,C,D'));
+        console.log(merge('b,c,aC,D'));
         console.log(migrate('a', 1, 1));
         console.log(percolate(undefined, undefined, undefined));
         return;
