@@ -1,0 +1,16 @@
+{
+    "name": "s4db",
+    "version": "0.0.0",
+    "main": "main.js",
+    "scripts": {
+        "test": "node test.js"
+    },
+    "dependencies": {
+        "sqlite3":  ">= 2.1.5"
+    },
+    "author": "Sean Wilkinson",
+    "license": "BSD",
+    "description": "(none)",
+    "private": true,
+    "readme": "(none)"
+}
