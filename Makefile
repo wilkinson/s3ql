@@ -2,6 +2,7 @@
 
 #-  Makefile ~~
 #                                                       ~~ (c) SRW, 31 Jul 2012
+#                                                   ~~ last updated 10 Aug 2012
 
 PROJ_ROOT   :=  $(realpath $(dir $(firstword $(MAKEFILE_LIST))))
 
@@ -25,6 +26,7 @@ all: run
 clean: reset
 
 clobber: clean
+	@   $(RM) npm-debug.log
 
 distclean: clobber
 	@   $(RM) $(PROJ_ROOT)/node_modules/
