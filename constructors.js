@@ -25,8 +25,8 @@
             outer = {};
         }
         var flag, that;
-        flag = ((outer instanceof Object)               &&
-                (outer.hasOwnProperty('secret'))        &&
+        flag = ((outer instanceof Object)           &&
+                (outer.hasOwnProperty('secret'))    &&
                 (outer.secret === secret));
         that = this;
         // ...
