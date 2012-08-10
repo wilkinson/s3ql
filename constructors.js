@@ -15,7 +15,7 @@
 
  // Declarations
 
-    var comm, secret, Resource, Reference, Storage;
+    var comm, secret, Reference, Resource, Storage;
 
  // Definitions
 
