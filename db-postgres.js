@@ -1,7 +1,7 @@
 //- JavaScript source code
 
-//- db-sqlite.js ~~
-//                                                      ~~ (c) SRW, 31 Jul 2012
+//- db-postgres.js ~~
+//                                                      ~~ (c) SRW, 12 Oct 2012
 
 (function () {
     'use strict';
@@ -14,8 +14,7 @@
 
  // Declarations
 
-    var close_db, create_db, create_table, insert_rows, read_all_rows, sqlite3;
-
+    var close_db, create_db, create_table, insert_rows, pg, read_all_rows;
  // Definitions
 
     close_db = function () {
@@ -46,6 +45,8 @@
         return y;
     };
 
+    pg = require('pg');
+
     read_all_rows = function () {
      // This function needs documentation.
         var y;
@@ -53,13 +54,11 @@
         return y;
     };
 
-    sqlite3 = require('sqlite3').verbose();
-
  // Out-of-scope definitions
 
  // Invocations
 
-    console.log('Loading SQLite3 wrapper ...');
+    console.log('Loading PostgreSQL wrapper ...');
 
  // That's all, folks!
 

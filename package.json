@@ -1,24 +1,24 @@
 {
-    "name": "s3ql",
-    "version": "0.0.2",
-    "description": "An implementation of the S3QL API",
-    "main": "main.js",
-    "scripts": {
-        "test": "node test.js"
-    },
+    "author": "Sean Wilkison",
     "dependencies": {
-        "corser":   ">= 1.1.1",
-        "sqlite3":  ">= 2.1.5"
+        "corser": "1.1.1",
+        "pg": "0.8.4"
     },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/wilkinson/s3ql.git"
-    },
+    "description": "An implementation of the S3QL API",
     "keywords": [
         "S3QL",
         "S3DB",
         "governance"
     ],
-    "author": "Sean Wilkinson",
-    "license": "BSD"
+    "license": "BSD",
+    "main": "main.js",
+    "name": "s3ql",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wilkinson/s3ql.git"
+    },
+    "scripts": {
+        "test": "node test.js"
+    },
+    "version": "0.0.3"
 }

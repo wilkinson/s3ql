@@ -2,7 +2,7 @@
 
 //- options.js ~~
 //                                                      ~~ (c) SRW, 31 Jul 2012
-//                                                  ~~ last updated 10 Aug 2012
+//                                                  ~~ last updated 12 Oct 2012
 
 (function () {
     'use strict';
@@ -22,7 +22,7 @@
  // Definitions
 
     default_options = {
-        database:   'sqlite3',
+        database:   'postgres',
         hostname:   'localhost',
         port:       '1153',             //- 's'.charCodeAt(0) + '3' :-)
         run_tests:  false

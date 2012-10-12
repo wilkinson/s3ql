@@ -2,7 +2,7 @@
 
 //- main.js ~~
 //                                                      ~~ (c) SRW, 31 Jul 2012
-//                                                  ~~ last updated 10 Aug 2012
+//                                                  ~~ last updated 12 Oct 2012
 
 (function () {
     'use strict';
@@ -34,8 +34,8 @@
      // This function needs documentation.
         var config, enable_cors, db, server;
         config = options.load(obj);
-        if (config.database === 'sqlite3') {
-            db = require('./db-sqlite');
+        if (config.database === 'postgres') {
+            db = require('./db-postgres');
         }
         if (config.run_tests === true) {
             operators.unit_tests();
