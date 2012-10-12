@@ -3,10 +3,11 @@ S3QL
 
 This project will implement the
 [S3QL](http://www.biomedcentral.com/1471-2105/12/285/) API for the
-[Node.js](http://nodejs.org/) platform. Currently, the prototype will use
-[SQLite](http://www.sqlite.org/) for data storage, and all program logic for
-the governance model will be written in pure JavaScript. The implementation
-will be embeddable into existing applications either as a
+[Node.js](http://nodejs.org/) platform. The prototype will use
+[PostgreSQL](http://www.postgresql.org/) for data storage initially, although
+[SQLite](http://www.sqlite.org/) will also be targeted in the future. All
+program logic for the governance model will be written in pure JavaScript. The
+implementation will be embeddable into existing applications either as a
 [Node.js module](https://npmjs.org/package/s3ql) or as a standalone program
 completely accessible over HTTP via the S3QL API.
 
