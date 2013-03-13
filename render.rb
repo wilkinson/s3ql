@@ -2,6 +2,7 @@
 
 #-  render.rb ~~
 #                                                       ~~ (c) SRW, 06 Aug 2012
+#                                                   ~~ last updated 12 Mar 2013
 
 require "date"
 require "redcarpet"
@@ -29,8 +30,8 @@ File::open(filename, "w") do |f|
     <meta charset="utf-8"/>
     <meta name="author" content="Sean Wilkinson"/>
     <title>Project Description: S3QL</title>
-    <link rel="stylesheet" href="./print.css" media="print"/>
-    <link rel="stylesheet" href="./screen.css" media="screen"/>
+    <link rel="stylesheet" href="../print.css" media="print"/>
+    <link rel="stylesheet" href="../screen.css" media="screen"/>
     <link rel="shortcut icon" href="//github.com/favicon.ico"/>
   </head>
   <body>
