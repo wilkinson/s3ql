@@ -1,5 +1,4 @@
-S3QL
-====
+# S3QL [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/wilkinson/s3ql/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 This project will implement the
 [S3QL](http://www.biomedcentral.com/1471-2105/12/285/) API for the
