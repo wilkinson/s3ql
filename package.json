@@ -2,7 +2,7 @@
     "author": "Sean Wilkinson",
     "dependencies": {
         "corser": "1.1.1",
-        "pg": "0.8.4"
+        "pg": "7.12.1"
     },
     "description": "An implementation of the S3QL API",
     "keywords": [
